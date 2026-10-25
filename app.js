@@ -29,9 +29,9 @@ const DATA = {
     UCASAL:  "-24.7417244,-65.3937178",
     VERBUM:  "Club Verbum Camp, Autopista Circunvalación Oeste, San Lorenzo Chico, Salta, Argentina",
     RAQUETA: "Club La Raqueta, Av. Finca Yerba Buena, Villa San Lorenzo, Salta, Argentina",
-    DIQUE:   "Dique Cabra Corral, Coronel Moldes, Salta, Argentina",
+    DIQUE:   "-25.2854615,-65.4335263", // Embalse Cabra Corral (pin de Google Maps indicado por Ailén)
     JOCKEY:  "Jockey Club Salta, Ruta 51, Limache, Salta, Argentina",
-    BATULE:  "Predio Ingeniero Jorge Eduardo Batule, Ruta Provincial 28 km 22, Salta, Argentina",
+    BATULE:  "-24.7150215,-65.4232956", // Unión Sirio Libanesa – Predio Ing. Batule (pin de Google Maps indicado por Ailén)
     TELEF:   "Teleférico San Bernardo, Av. San Martín y Hipólito Yrigoyen, Salta, Argentina"
   },
 
