@@ -1,0 +1,296 @@
+/* Encuentro Deportivo Salta 2026 – estilos. Mobile primero, sin dependencias. */
+
+:root {
+  color-scheme: light dark;
+  --bordo: #7A1530;
+  --bordo-claro: #A3223F;
+  --bg: #F4F1F2;
+  --card: #FFFFFF;
+  --texto: #1C1B1F;
+  --texto-2: #55525A;
+  --borde: #DDD6D9;
+  --on-bg: #E9F3EC;
+  --on-fg: #14532D;
+  --off-bg: #EFEDEE;
+  --off-fg: #5A5760;
+  --link: #0B57D0;
+  --btn-bg: #F6F8FE;
+  --btn-borde: #C4D2EF;
+  --aviso-bg: #FFF6DD;
+  --aviso-fg: #4A3800;
+  --aviso-borde: #E6CF86;
+  --foco: #0B57D0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141214;
+    --card: #1F1C1F;
+    --texto: #F1EEF0;
+    --texto-2: #BBB6BC;
+    --borde: #3A353A;
+    --on-bg: #17392A;
+    --on-fg: #BBF7D0;
+    --off-bg: #2A272B;
+    --off-fg: #B3ADB4;
+    --link: #9CC2FF;
+    --btn-bg: #242831;
+    --btn-borde: #3C4A6B;
+    --aviso-bg: #3A2F10;
+    --aviso-fg: #FDE9A8;
+    --aviso-borde: #6B5A22;
+    --foco: #9CC2FF;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 14px;
+}
+
+/* ---------- Encabezado ---------- */
+.hero {
+  background: var(--bordo);
+  color: #fff;
+  padding: 18px 0 16px;
+}
+
+.hero h1 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.hero-nota {
+  margin: 0 0 14px;
+  font-size: 15px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.oficial {
+  display: block;
+  min-height: 44px;
+  padding: 10px 12px;
+  background: #fff;
+  color: var(--bordo);
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.oficial-titulo { display: block; font-weight: 700; font-size: 16px; }
+
+.oficial-url {
+  display: block;
+  margin-top: 2px;
+  font-size: 15px;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Aviso, filtros, contador ---------- */
+.aviso {
+  margin: 14px 0 0;
+  padding: 10px 12px;
+  background: var(--aviso-bg);
+  color: var(--aviso-fg);
+  border: 1px solid var(--aviso-borde);
+  border-radius: 10px;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.aviso-fecha { display: block; margin-top: 4px; font-weight: 600; }
+
+.controles {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 12px;
+  background: var(--card);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+select {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 12px;
+  font: inherit;
+  font-size: 16px;
+  color: var(--texto);
+  background: var(--card);
+  border: 1px solid var(--texto-2);
+  border-radius: 10px;
+}
+
+.contador {
+  margin: 12px 2px 0;
+  font-size: 15px;
+  color: var(--texto-2);
+}
+
+/* ---------- Tarjetas ---------- */
+.lista {
+  display: grid;
+  gap: 14px;
+  margin: 10px 0 28px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.card-cab {
+  background: var(--bordo-claro);
+  color: #fff;
+  padding: 11px 14px;
+}
+
+.card-cab h2 {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.25;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.card-cuerpo { padding: 12px 14px 14px; }
+
+.sede {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.direccion {
+  margin: 2px 0 0;
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--texto-2);
+  overflow-wrap: anywhere;
+}
+
+.dias {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.dia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: 62px;
+  padding: 6px 2px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.dia-nombre { font-size: 15px; line-height: 1.2; }
+.dia-hora { font-size: 15px; line-height: 1.2; font-weight: 700; }
+
+.dia.on { background: var(--on-bg); color: var(--on-fg); }
+.dia.off { background: var(--off-bg); color: var(--off-fg); }
+
+.nota {
+  margin: 8px 0 0;
+  font-size: 15px;
+  color: var(--texto-2);
+}
+
+.llegar-titulo {
+  margin: 14px 0 6px;
+  font-size: 15px;
+  color: var(--texto-2);
+}
+
+.botones { display: grid; gap: 8px; }
+
+.btn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2px 10px;
+  min-height: 48px;
+  padding: 8px 12px;
+  background: var(--btn-bg);
+  color: var(--texto);
+  border: 1px solid var(--btn-borde);
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.btn-largo { flex-direction: column; align-items: stretch; gap: 0; }
+.btn-largo .btn-est { margin-left: 0; }
+
+.btn-hotel { font-weight: 600; }
+
+.btn-est {
+  margin-left: auto;
+  color: var(--link);
+  text-decoration: underline;
+  font-weight: 600;
+  text-align: right;
+}
+
+/* ---------- Accesibilidad ---------- */
+a:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--foco);
+  outline-offset: 2px;
+}
+
+.hero a:focus-visible { outline-color: #fff; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (min-width: 520px) {
+  .controles { grid-template-columns: 1fr 1fr; }
+}

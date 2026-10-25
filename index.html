@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#7A1530">
+  <meta name="color-scheme" content="light dark">
+  <title>Encuentro Deportivo Salta 2026 – Sedes y distancias (CPCE Misiones)</title>
+  <meta name="description" content="Disciplinas, sedes, horarios y distancia en auto desde los hoteles Crystal, Caseros y Alto Parque. XX Encuentro Deportivo Nacional, Salta, 28 al 31 de octubre de 2026.">
+  <meta property="og:title" content="Encuentro Deportivo Salta 2026 – Sedes y distancias">
+  <meta property="og:description" content="Disciplinas, sedes, horarios y cómo llegar en auto desde cada hotel. Delegación CPCE Misiones.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%237A1530'/%3E%3Cpath d='M16 5a7 7 0 0 0-7 7c0 5 7 14 7 14s7-9 7-14a7 7 0 0 0-7-7z' fill='white'/%3E%3Ccircle cx='16' cy='12' r='2.5' fill='%237A1530'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <h1>XX Encuentro Deportivo Nacional – Salta 2026 · Disciplinas, sedes y distancias desde los hoteles - CPCE MISIONES</h1>
+      <p class="hero-nota">Horarios: cronograma tentativo del sitio oficial del encuentro (28 al 31 de octubre). Distancias y tiempos: ESTIMACIONES aproximadas en auto. Hacé clic en cada estimación para abrir la ruta en Google Maps con el dato exacto.</p>
+      <a class="oficial" href="https://encuentro2026.consejosalta.org.ar/disciplinas" target="_blank" rel="noopener">
+        <span class="oficial-titulo">Ver las disciplinas en el sitio oficial</span>
+        <span class="oficial-url">https://encuentro2026.consejosalta.org.ar/<wbr>disciplinas</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="aviso">
+      <strong>Horarios tentativos:</strong> confirmalos con la organización. Los km y minutos son aproximados (≈).
+      <span class="aviso-fecha" id="actualizacion"></span>
+    </p>
+
+    <section class="controles" aria-label="Filtros">
+      <div class="campo">
+        <label for="hotel">Mi hotel</label>
+        <select id="hotel"></select>
+      </div>
+      <div class="campo">
+        <label for="disciplina">Disciplina</label>
+        <select id="disciplina"></select>
+      </div>
+    </section>
+
+    <p class="contador" id="contador" aria-live="polite"></p>
+
+    <noscript><p class="aviso">Para ver las disciplinas hace falta activar JavaScript en el navegador.</p></noscript>
+
+    <div class="lista" id="lista"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
